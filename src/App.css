@@ -1,32 +1,299 @@
-.App {
+.app {
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy-ticket-btn {
+  width: 160px;
+  height: 56px;
+  border-radius: 5px;
+  background-color: #ff6d00;
+  border: 0px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.buy-ticket-btn-text {
+  color: #ffffff;
+  font-family: "Open Sans Semibold";
+  font-size: 18px;
+  font-weight: 600;
+  font-weight: 400;
+}
+
+.ticket-info-date {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.origin-info {
+  display: inline-block;
+}
+
+.transition-info {
+  display: inline-block;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.destination-info {
+  display: inline-block;
+  margin-left: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
+.ticket-info-buy {
+  display: inline-flex;
   flex-direction: column;
+}
+
+.ticket-info-container {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 1px 4px rgba(91, 137, 164, 0.25);
+  padding: 25px 25px 25px 20px;
+}
+
+.ticket-time-text {
+  color: #4a4a4a;
+  font-family: "Open Sans";
+  font-size: 35px;
+  line-height: 26px;
+}
+
+.ticket-origin-text {
+  color: #4a4a4a;
+  font-family: "Open Sans Semibold";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+.ticket-date-text {
+  color: #8b9497;
+  font-family: "Open Sans";
+}
+
+.airlines-logo {
+  width: 120px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.transition-info {
+  position: relative;
+  width: 109px;
+}
+
+.transition-line-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.transition-flight-icon {
+  position: absolute;
+  top: -1px;
+  right: -7px;
+}
+
+.transition-icons {
+  width: 100%;
+  position: relative;
+}
+
+.stops-text {
+  color: #8b9497;
+  font-family: "Open Sans Semibold";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12.1px;
+}
+
+.filter-panel-container {
+  width: 236px;
+  box-shadow: 0 1px 4px rgba(91, 137, 164, 0.25);
+  padding: 15px 15px 20px 15px;
+  box-sizing: border-box;
+}
+
+.currency-panel-text {
+  color: #4a4a4a;
+  font-family: "Open Sans Semibold";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.filter-btn {
+  width: 68px;
+  height: 40px;
+  font-size: 12px;
+  font-family: "Open Sans Semibold";
+  font-weight: 600;
+  border: 0px;
+  cursor: pointer;
+}
+
+.left-btn {
+  border-radius: 5px 0 0 5px;
+}
+
+.right-btn {
+  border-radius: 0 5px 5px 0;
+}
+
+.active-btn {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+.inactive-btn {
+  background-color: #f2fcff;
+  color: #2196f3;
+  border: 1px solid #d2d5d6;
+}
+
+.inactive-btn:hover {
+  border: 1px solid #64b5f5;
+}
+
+.transitions-filter-panel {
+  text-align: left;
+  margin-top: 30px;
+}
+
+.currency-btns-panel {
+  margin-top: 10px;
+}
+
+.filters-checkbox-container {
+}
+
+.transition-filter-text {
+  color: #4a4a4a;
+  font-family: "Open Sans Semibold";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.checkbox-text {
+  color: #4a4a4a;
+  font-family: "Open Sans";
+  font-size: 13px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.checkbox-container {
+  width: 19px;
+  height: 19px;
+  border-radius: 3px;
+  background-color: #f2fcff;
+  margin: 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.checkbox-active {
+  border: 1px solid #2196f3;
+}
+
+.checkbox-inactive {
+  border: 1px solid #d2d5d6;
+}
+
+.checkmark {
+  user-select: none;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.filter-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 14px;
   align-items: center;
+}
+
+.app-header {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+
+.app-content {
+  width: 100%;
+  padding-left: 103px;
+  padding-right: 103px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-contet {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.right-content {
+  margin-left: 17px;
+  display: inline-block;
+}
+
+.margin-ticket {
+  margin-top: 20px;
+}
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
