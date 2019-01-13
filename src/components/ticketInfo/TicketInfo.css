@@ -1,0 +1,110 @@
+.ticket-info-container {
+  display: flex;
+  flex-direction: row;
+  box-shadow: 0 1px 4px rgba(91, 137, 164, 0.25);
+  padding: 25px 25px 25px 20px;
+}
+
+.margin-ticket {
+  margin-top: 20px;
+}
+
+.ticket-info-buy {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.airlines-logo {
+  width: 120px;
+  height: 35px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.buy-ticket-btn {
+  width: 160px;
+  height: 56px;
+  border-radius: 5px;
+  background-color: #ff6d00;
+  border: 0px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.buy-ticket-btn-text {
+  color: #ffffff;
+  font-family: "Open Sans Semibold";
+  font-size: 18px;
+  font-weight: 600;
+  font-weight: 400;
+}
+
+.ticket-info-date {
+  display: flex;
+  flex-direction: row;
+  margin-left: 40px;
+  text-align: left;
+}
+
+.origin-info {
+  display: inline-block;
+}
+
+.ticket-time-text {
+  color: #4a4a4a;
+  font-family: "Open Sans";
+  font-size: 35px;
+  line-height: 26px;
+}
+
+.ticket-origin-text {
+  color: #4a4a4a;
+  font-family: "Open Sans Semibold";
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 10px;
+}
+
+.ticket-date-text {
+  color: #8b9497;
+  font-family: "Open Sans";
+}
+
+.transition-info {
+  position: relative;
+  width: 109px;
+  display: inline-block;
+  text-align: center;
+}
+
+.transition-icons {
+  width: 100%;
+  position: relative;
+}
+
+.transition-line-icon {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.transition-flight-icon {
+  position: absolute;
+  top: -1px;
+  right: -7px;
+}
+
+.destination-info {
+  display: inline-block;
+  margin-left: 25px;
+}
+
+.stops-text {
+  color: #8b9497;
+  font-family: "Open Sans Semibold";
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 12.1px;
+  text-transform: uppercase;
+}

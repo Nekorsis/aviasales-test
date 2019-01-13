@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import collectionMethods from 'lodash/collection';
 
-import TicketInfo from './components/ticketInfo/TicketInfo';
-import FilterPanel from './components/filterPanel/filterPanel';
-import logo from './logo.png';
+import TicketInfo from './components/TicketInfo/TicketInfo';
+import FilterPanel from './components/FilterPanel/FilterPanel';
+import logo from './images/logo.png';
 import './App.css';
+import './Reset.css';
 
 class App extends Component {
   constructor(props) {

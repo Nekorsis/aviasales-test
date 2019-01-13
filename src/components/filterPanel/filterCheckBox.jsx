@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import checkmark from '../../checkmark.png';
+import checkmark from '../../images/checkmark.png';
+import './FilterPanel.css';
 
 class FilterCheckBox extends Component {
   constructor(props) {
@@ -24,7 +25,7 @@ class FilterCheckBox extends Component {
 
   render() {
     const { isChecked } = this.state;
-    const { text, setFilter } = this.props;
+    const { text } = this.props;
     return (
       <div className="filter-container">
         <div onClick={this.handleInputChange} className={`checkbox-container ${isChecked ? 'checkbox-active' : 'checkbox-inactive'}`}>

@@ -1,20 +1,23 @@
 import React from 'react';
 import moment from 'moment';
 import 'moment/locale/ru';
-import transitionLine from '../../transition_line.png';
-import transitionIcon from '../../transition_icon.png';
-import turkishLogo from '../../turkish-airlines-logo-png.png';
+import transitionLine from '../../images/transition_line.png';
+import transitionIcon from '../../images/transition_icon.png';
+import turkishLogo from '../../images/turkish-airlines-logo-png.png';
+import './TicketInfo.css';
 
 const TicketInfo = (props) => {
+  const { ticket, currency, index } = props;
+
   const renderStops = (s) => {
     if (s <= 0) {
       return null;
     } if (s === 1) {
-      return <p className="stops-text">{`${props.ticket.stops} ПЕРЕСАДКА`}</p>;
+      return <p className="stops-text">{`${ticket.stops} пересадка`}</p>;
     } if (s >= 5) {
-      return <p className="stops-text">{`${props.ticket.stops} ПЕРЕСАДОК`}</p>;
+      return <p className="stops-text">{`${ticket.stops} пересадок`}</p>;
     }
-    return <p className="stops-text">{`${props.ticket.stops} ПЕРЕСАДКИ`}</p>;
+    return <p className="stops-text">{`${ticket.stops} пересадки`}</p>;
   };
 
   const getDateDay = (d) => {
@@ -25,7 +28,6 @@ const TicketInfo = (props) => {
   };
 
   const parsePrice = (p) => {
-    const { currency } = props;
     let price = p;
     let currencyIcon = '₽';
     if (currency === 'usd') {
@@ -48,31 +50,31 @@ const TicketInfo = (props) => {
   };
 
   return (
-    <div className={`ticket-info-container ${props.index > 0 ? 'margin-ticket' : ''}`}>
+    <div className={`ticket-info-container ${index > 0 ? 'margin-ticket' : ''}`}>
       <div className="ticket-info-buy">
         <img className="airlines-logo" alt="" src={turkishLogo} />
         <button type="button" className="buy-ticket-btn">
           <p className="buy-ticket-btn-text">Купить</p>
-          <p className="buy-ticket-btn-text">{`за ${parsePrice(props.ticket.price)}`}</p>
+          <p className="buy-ticket-btn-text">{`за ${parsePrice(ticket.price)}`}</p>
         </button>
       </div>
       <div className="ticket-info-date">
         <div className="origin-info">
-          <p className="ticket-time-text">{props.ticket.departure_time}</p>
-          <p className="ticket-origin-text">{`${props.ticket.origin}, ${props.ticket.origin_name}`}</p>
-          <p className="ticket-date-text">{`${getDateDay(props.ticket.departure_date)}`}</p>
+          <p className="ticket-time-text">{ticket.departure_time}</p>
+          <p className="ticket-origin-text">{`${ticket.origin}, ${ticket.origin_name}`}</p>
+          <p className="ticket-date-text">{`${getDateDay(ticket.departure_date)}`}</p>
         </div>
         <div className="transition-info">
-          {renderStops(props.ticket.stops)}
+          {renderStops(ticket.stops)}
           <div className="transition-icons">
-            <img className="transition-line-icon" src={transitionLine} />
-            <img className="transition-flight-icon" src={transitionIcon} />
+            <img alt="" className="transition-line-icon" src={transitionLine} />
+            <img alt="" className="transition-flight-icon" src={transitionIcon} />
           </div>
         </div>
         <div className="destination-info">
-          <p className="ticket-time-text">{props.ticket.arrival_time}</p>
-          <p className="ticket-origin-text">{`${props.ticket.destination}, ${props.ticket.destination_name}`}</p>
-          <p className="ticket-date-text">{`${getDateDay(props.ticket.arrival_date)}`}</p>
+          <p className="ticket-time-text">{ticket.arrival_time}</p>
+          <p className="ticket-origin-text">{`${ticket.destination}, ${ticket.destination_name}`}</p>
+          <p className="ticket-date-text">{`${getDateDay(ticket.arrival_date)}`}</p>
         </div>
       </div>
     </div>
