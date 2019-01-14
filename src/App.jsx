@@ -4,6 +4,7 @@ import collectionMethods from 'lodash/collection';
 import TicketInfo from './components/TicketInfo/TicketInfo';
 import FilterPanel from './components/FilterPanel/FilterPanel';
 import logo from './images/logo.png';
+import ticketsFile from './tickets';
 import './App.css';
 import './Reset.css';
 
@@ -11,22 +12,10 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tickets: null,
+      tickets: collectionMethods.orderBy(ticketsFile.tickets, ['price']),
       filters: [],
       currency: 'rub',
     };
-  }
-
-  componentWillMount() {
-    fetch('/tickets', {
-      method: 'GET',
-    })
-      .then(response => (response.json()))
-      .then((data) => {
-        this.setState({
-          tickets: collectionMethods.orderBy(data.tickets, ['price']),
-        });
-      });
   }
 
   setFilter = (f) => {
