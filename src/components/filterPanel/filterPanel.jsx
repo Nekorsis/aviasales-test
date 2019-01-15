@@ -3,7 +3,7 @@ import FilterCheckBox from './FilterCheckBox';
 
 const FilterPanel = (props) => {
   const {
-    setFilter, deleteFilter, filters, setCurrency, currency,
+    setFilter, deleteFilter, filters, setCurrency, currency, setNoStopsFilter,
   } = props;
   const filtersText = [
     { name: 'Все', id: 4 },
@@ -41,6 +41,7 @@ const FilterPanel = (props) => {
               setFilter={setFilter}
               deleteFilter={deleteFilter}
               filters={filters}
+              setNoStopsFilter={setNoStopsFilter}
             />
           ))}
         </div>

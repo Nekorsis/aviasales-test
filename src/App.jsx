@@ -22,6 +22,10 @@ class App extends Component {
     this.setState(prevState => ({ filters: [...prevState.filters, f] }));
   }
 
+  setNoStopsFilter = (f) => {
+    this.setState({ filters: [f] });
+  }
+
   deleteFilter = (f) => {
     const { filters } = this.state;
     const localFilters = filters;
@@ -65,6 +69,7 @@ class App extends Component {
               filters={filters}
               currency={currency}
               setCurrency={this.setCurrency}
+              setNoStopsFilter={this.setNoStopsFilter}
             />
           </div>
           <div className="right-content">
